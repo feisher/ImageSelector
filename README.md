@@ -23,9 +23,9 @@ dependencies {
 
 ## 使用
 
-### 初始化
+### 初始化(**在Application中**)
 ```java
-// 自定义图片加载器
+// 自定义图片加载器=，务必在application的onCreate()方法中，否则可能内存泄漏
 ISNav.getInstance().init(new ImageLoader() {
     @Override
     public void displayImage(Context context, String path, ImageView imageView) {
